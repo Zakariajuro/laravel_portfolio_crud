@@ -28,5 +28,6 @@ Route::get('/backoff/backOffice/create', [BackController::class, 'create'])->nam
 Route::post('/backoff/backOffice/store', [BackController::class, 'store'])->name('form.store');
 
 // DELETE 
-Route::delete('/backoff/backOffice/delete', [BackController::class, 'destroy'])->name('form.destroy');
+Route::delete('/backoff/backOffice/{id}/delete', [BackController::class, 'destroy'])->name('form.destroy');
+Route::get('/backoff/backOffice/{id}/doawload', [BackController::class, 'download'])->name('back.download');
 

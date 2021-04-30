@@ -14,15 +14,7 @@
         </div>
 
         <hr>
-        <h4 class="my-5">AJOUTER UNE IMAGE PAR LE LIEN :</h4>
-        {{-- <div class="row">
-            <div class="col-3">
-                <label for="img">image</label>
-            </div>
-            <div class="col-3">
-                <input name="img" id="img" type="text">
-            </div>
-        </div> --}}
+        {{-- <h4 class="my-5">AJOUTER UNE IMAGE PAR LE LIEN :</h4> --}}
         <button class="mt-4" type="submit">Envoyer</button>
     </form>
 @endsection

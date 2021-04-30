@@ -16,9 +16,9 @@ class BackController extends Controller
         $images = Image::all();
         return view('backoff/form/formcreate', compact('images'));
     }
-    public function destroy(Image $images){
-        Storage::delete('public/img/' . $images->src);
-
+    public function destroy(Image $id){
+        $images = $id;
+        Storage::delete('public/img/' . $images->image);
         $images->delete();
         return redirect()->back();
     }
@@ -33,5 +33,8 @@ class BackController extends Controller
         $images->src = $request->file('img')->hashName();
         $images->save();
         return redirect()->route('backoffice');
+    }
+    public function download(Image $id){
+        return Storage::download('public/img/' . $id->src); 
     }
 }

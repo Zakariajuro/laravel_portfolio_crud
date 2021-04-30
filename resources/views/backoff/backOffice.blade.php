@@ -15,8 +15,9 @@
                         <form method="POST" action="{{route('form.destroy', $image->id)}}">
                             @csrf
                             @method('DELETE')
-                            <a class="btn btn-danger" type="submit">Delete</a>
+                            <button  class="btn btn-danger"> delete</button>
                         </form>
+                        <a href={{route('back.download', $image->id)}} class="btn btn-success my-2">TELECHARGER</a>
                         <hr>
                     </div>
                 @else
@@ -24,6 +25,7 @@
                         <p>CECI N'EST PAS UNE IMAGE :</p>
                         <p>nom complet de l'image : {{$image->img}}</p>
                    </div>
+                   
                 @endif
                 
             @endforeach
